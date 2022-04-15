@@ -38,32 +38,60 @@
   
 // }
 
-class  terapeuta {
+class  Terapeuta {
   constructor (nombre, nacionalidad, modalidad, precio, tipo){
     this.nombre = nombre.toUpperCase()
     this.nacionalidad = nacionalidad
     this.modalidad = modalidad
     this.precio = precio
-    this.tipo = tipo
+    this.tipos = []
   }
 
+    agregarTipo(tipo){
+      this.tipo.push(tipo)
+    }
 }
+class Tipo{
+  constructor(nombreTerapeuta, tipoTerapeuta, atencion){
+    this.nombreTerapeuta = nombreTerapeuta;
+    this.tipoTerapeuta = tipoTerapeuta;
+    this.atencion = atencion;
+  }
+}
+
+class Cuenta {
+  constructor(nombrePaciente, tipoCuenta, metodoAtencion, costo ){
+    this.nombrePaciente = nombrePaciente;
+    this.tipoCuenta = tipoCuenta;
+    this.metodoAtencion = metodoAtencion;
+    this.numeroSesiones = []
+
+  }
+  agregarTipo(numeroSesiones){
+    this.sesiones.push(sesiones)
+  }
+}
+const paciente = []
+paciente.push(new Cuenta("Antonio", "1 sesion", "videoTerapia", "4.99"))
+
+console.log(Cuenta);
+
 const experto = []
-experto.push(new terapeuta("Gabriel ", "Peruano", "Videollamada", 9.99, "Experto"))
+experto.push(new Terapeuta("Gabriel ", "Peruana", "Videollamada", 9.99, "Experto"))
 
 
-console.log(experto);
+console.log(experto); 
 
 
 const especialista =[]
-especialista.push(new terapeuta("Andres", "Mexicana", "Videollamada", 7.99, "Especialista"))
+especialista.push(new Terapeuta("Andres", "Mexicana", "Videollamada", 7.99, "Especialista"))
 
 
 console.log(especialista);
 
 
 const profecional = []
-profecional.push(new terapeuta("Macario", "Argentina", "Chat", 4.99, "Profecional"))
+profecional.push(new Terapeuta("Macario", "Argentina", "Chat", 4.99, "Profecional"))
 
 
 console.log(profecional);
